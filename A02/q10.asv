@@ -1,0 +1,10 @@
+m=[2:0.5:20];
+
+f = @(x) sin(x) +sin(2/3 * x);
+
+
+plot(m, f(m))
+xlabel("x")
+ylabel("f(x)")
+
+fprintf("Minimum: %.5f", c(x) );

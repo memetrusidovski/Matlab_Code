@@ -1,0 +1,12 @@
+%interval
+a = -1;
+b = 0;
+c = (a + b )/ 2;
+
+iterations = 10;
+acc = 0.001;
+
+func =@(x) -12-21*x+18*x^2-2.75*x^3;
+
+
+fprintf("%d", func(5))

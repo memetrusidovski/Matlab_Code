@@ -1,0 +1,11 @@
+f =@(x) log(x^2)-0.7;
+
+x(1)=-2;
+x(2)=-1;
+
+
+for i = 1:11
+    m(i+1)= m(i) - (f(m(i))/f_d(m(i)));
+    error(i) = abs(m(i+1)-m(i));
+    fprintf("Root at: %.8f With Error of: %d\n", m(i+1), error(i));
+end
