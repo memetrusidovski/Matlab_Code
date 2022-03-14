@@ -1,0 +1,13 @@
+T_C=[-40 0 40 80 120 160] + 273;
+p=[6900 8100 9350 10500 11700 12800];
+A=[numel(T_C) sum(T_C); sum(T_C) sum(T_C.^2)];
+b=[sum(p);sum(T_C.*p)];
+
+m=A\b;
+slope=m(2);
+n=numel(T_C);
+
+fprintf('The slope m is %.4f\n',slope)
+r=(n*sum(T_C.*p)-sum(T_C)*sum(p))/sqrt((n*sum(T_C.^2)-sum(T_C)^2)*(n*sum(p.^2)-sum(p)^2));
+fprintf('The correlation coefficient is %.4f\n',r)
+
